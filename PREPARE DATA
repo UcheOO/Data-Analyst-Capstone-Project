@@ -1,1 +1,374 @@
+# load data sets.
+Dec_2020 <- read_csv("202011-divvy-tripdata.csv")
+## Rows: 259716 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (5): ride_id, rideable_type, start_station_name, end_station_name, memb...
+## dbl  (6): start_station_id, end_station_id, start_lat, start_lng, end_lat, e...
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Jan_2021 <- read_csv("202012-divvy-tripdata.csv")
+## Rows: 131573 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Feb_2021 <- read_csv("202101-divvy-tripdata.csv")
+## Rows: 96834 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Mar_2021 <- read_csv("202102-divvy-tripdata.csv")
+## Rows: 49622 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Apr_2021 <- read_csv("202103-divvy-tripdata.csv")
+## Rows: 228496 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+May_2021 <- read_csv("202104-divvy-tripdata.csv")
+## Rows: 337230 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Jun_2021 <- read_csv("202105-divvy-tripdata.csv")
+## Rows: 531633 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Jul_2021 <- read_csv("202106-divvy-tripdata.csv")
+## Rows: 729595 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Aug_2021 <- read_csv("202107-divvy-tripdata.csv")
+## Rows: 822410 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Sep_2021 <- read_csv("202108-divvy-tripdata.csv")
+## Rows: 804352 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Oct_2021 <- read_csv("202109-divvy-tripdata.csv")
+## Rows: 756147 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Nov_2021 <- read_csv("202110-divvy-tripdata.csv")
+## Rows: 631226 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (7): ride_id, rideable_type, start_station_name, start_station_id, end_...
+## dbl  (4): start_lat, start_lng, end_lat, end_lng
+## dttm (2): started_at, ended_at
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# a quick check to see if all column names are named equally
+colnames(Dec_2020)
+##  [1] "ride_id"            "rideable_type"      "started_at"        
+##  [4] "ended_at"           "start_station_name" "start_station_id"  
+##  [7] "end_station_name"   "end_station_id"     "start_lat"         
+## [10] "start_lng"          "end_lat"            "end_lng"           
+## [13] "member_casual"
+colnames(Mar_2021)
+##  [1] "ride_id"            "rideable_type"      "started_at"        
+##  [4] "ended_at"           "start_station_name" "start_station_id"  
+##  [7] "end_station_name"   "end_station_id"     "start_lat"         
+## [10] "start_lng"          "end_lat"            "end_lng"           
+## [13] "member_casual"
+colnames(Jun_2021)
+##  [1] "ride_id"            "rideable_type"      "started_at"        
+##  [4] "ended_at"           "start_station_name" "start_station_id"  
+##  [7] "end_station_name"   "end_station_id"     "start_lat"         
+## [10] "start_lng"          "end_lat"            "end_lng"           
+## [13] "member_casual"
+colnames(Sep_2021)
+##  [1] "ride_id"            "rideable_type"      "started_at"        
+##  [4] "ended_at"           "start_station_name" "start_station_id"  
+##  [7] "end_station_name"   "end_station_id"     "start_lat"         
+## [10] "start_lng"          "end_lat"            "end_lng"           
+## [13] "member_casual"
+# Convert some columns to characters.
+Dec_2020 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Jan_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Feb_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Mar_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Apr_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+May_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Jun_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Jul_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Aug_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Sep_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Oct_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+Nov_2021 <- mutate(Dec_2020, start_station_id = as.character(start_station_id),
+                   end_station_id = as.character(end_station_id))
+#Combining the data sets into Seasons
+Winter <- bind_rows(Dec_2020, Jan_2021, Feb_2021) #as q1
 
+Spring <- bind_rows(Mar_2021,Apr_2021, May_2021)  #as q2
+  
+Summer <- bind_rows(Jun_2021, Jul_2021, Aug_2021) #as q3
+
+Autumn <- bind_rows(Sep_2021, Oct_2021, Nov_2021) #as q4
+#Inspect the data
+str(Winter)
+## spec_tbl_df [779,148 x 13] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ ride_id           : chr [1:779148] "BD0A6FF6FFF9B921" "96A7A7A4BDE4F82D" "C61526D06582BDC5" "E533E89C32080B9E" ...
+##  $ rideable_type     : chr [1:779148] "electric_bike" "electric_bike" "electric_bike" "electric_bike" ...
+##  $ started_at        : POSIXct[1:779148], format: "2020-11-01 13:36:00" "2020-11-01 10:03:26" ...
+##  $ ended_at          : POSIXct[1:779148], format: "2020-11-01 13:45:40" "2020-11-01 10:14:45" ...
+##  $ start_station_name: chr [1:779148] "Dearborn St & Erie St" "Franklin St & Illinois St" "Lake Shore Dr & Monroe St" "Leavitt St & Chicago Ave" ...
+##  $ start_station_id  : chr [1:779148] "110" "672" "76" "659" ...
+##  $ end_station_name  : chr [1:779148] "St. Clair St & Erie St" "Noble St & Milwaukee Ave" "Federal St & Polk St" "Stave St & Armitage Ave" ...
+##  $ end_station_id    : chr [1:779148] "211" "29" "41" "185" ...
+##  $ start_lat         : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ start_lng         : num [1:779148] -87.6 -87.6 -87.6 -87.7 -87.6 ...
+##  $ end_lat           : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ end_lng           : num [1:779148] -87.6 -87.7 -87.6 -87.7 -87.6 ...
+##  $ member_casual     : chr [1:779148] "casual" "casual" "casual" "casual" ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   ride_id = col_character(),
+##   ..   rideable_type = col_character(),
+##   ..   started_at = col_datetime(format = ""),
+##   ..   ended_at = col_datetime(format = ""),
+##   ..   start_station_name = col_character(),
+##   ..   start_station_id = col_double(),
+##   ..   end_station_name = col_character(),
+##   ..   end_station_id = col_double(),
+##   ..   start_lat = col_double(),
+##   ..   start_lng = col_double(),
+##   ..   end_lat = col_double(),
+##   ..   end_lng = col_double(),
+##   ..   member_casual = col_character()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+str(Spring)
+## spec_tbl_df [779,148 x 13] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ ride_id           : chr [1:779148] "BD0A6FF6FFF9B921" "96A7A7A4BDE4F82D" "C61526D06582BDC5" "E533E89C32080B9E" ...
+##  $ rideable_type     : chr [1:779148] "electric_bike" "electric_bike" "electric_bike" "electric_bike" ...
+##  $ started_at        : POSIXct[1:779148], format: "2020-11-01 13:36:00" "2020-11-01 10:03:26" ...
+##  $ ended_at          : POSIXct[1:779148], format: "2020-11-01 13:45:40" "2020-11-01 10:14:45" ...
+##  $ start_station_name: chr [1:779148] "Dearborn St & Erie St" "Franklin St & Illinois St" "Lake Shore Dr & Monroe St" "Leavitt St & Chicago Ave" ...
+##  $ start_station_id  : chr [1:779148] "110" "672" "76" "659" ...
+##  $ end_station_name  : chr [1:779148] "St. Clair St & Erie St" "Noble St & Milwaukee Ave" "Federal St & Polk St" "Stave St & Armitage Ave" ...
+##  $ end_station_id    : chr [1:779148] "211" "29" "41" "185" ...
+##  $ start_lat         : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ start_lng         : num [1:779148] -87.6 -87.6 -87.6 -87.7 -87.6 ...
+##  $ end_lat           : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ end_lng           : num [1:779148] -87.6 -87.7 -87.6 -87.7 -87.6 ...
+##  $ member_casual     : chr [1:779148] "casual" "casual" "casual" "casual" ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   ride_id = col_character(),
+##   ..   rideable_type = col_character(),
+##   ..   started_at = col_datetime(format = ""),
+##   ..   ended_at = col_datetime(format = ""),
+##   ..   start_station_name = col_character(),
+##   ..   start_station_id = col_double(),
+##   ..   end_station_name = col_character(),
+##   ..   end_station_id = col_double(),
+##   ..   start_lat = col_double(),
+##   ..   start_lng = col_double(),
+##   ..   end_lat = col_double(),
+##   ..   end_lng = col_double(),
+##   ..   member_casual = col_character()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+str(Summer)
+## spec_tbl_df [779,148 x 13] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ ride_id           : chr [1:779148] "BD0A6FF6FFF9B921" "96A7A7A4BDE4F82D" "C61526D06582BDC5" "E533E89C32080B9E" ...
+##  $ rideable_type     : chr [1:779148] "electric_bike" "electric_bike" "electric_bike" "electric_bike" ...
+##  $ started_at        : POSIXct[1:779148], format: "2020-11-01 13:36:00" "2020-11-01 10:03:26" ...
+##  $ ended_at          : POSIXct[1:779148], format: "2020-11-01 13:45:40" "2020-11-01 10:14:45" ...
+##  $ start_station_name: chr [1:779148] "Dearborn St & Erie St" "Franklin St & Illinois St" "Lake Shore Dr & Monroe St" "Leavitt St & Chicago Ave" ...
+##  $ start_station_id  : chr [1:779148] "110" "672" "76" "659" ...
+##  $ end_station_name  : chr [1:779148] "St. Clair St & Erie St" "Noble St & Milwaukee Ave" "Federal St & Polk St" "Stave St & Armitage Ave" ...
+##  $ end_station_id    : chr [1:779148] "211" "29" "41" "185" ...
+##  $ start_lat         : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ start_lng         : num [1:779148] -87.6 -87.6 -87.6 -87.7 -87.6 ...
+##  $ end_lat           : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ end_lng           : num [1:779148] -87.6 -87.7 -87.6 -87.7 -87.6 ...
+##  $ member_casual     : chr [1:779148] "casual" "casual" "casual" "casual" ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   ride_id = col_character(),
+##   ..   rideable_type = col_character(),
+##   ..   started_at = col_datetime(format = ""),
+##   ..   ended_at = col_datetime(format = ""),
+##   ..   start_station_name = col_character(),
+##   ..   start_station_id = col_double(),
+##   ..   end_station_name = col_character(),
+##   ..   end_station_id = col_double(),
+##   ..   start_lat = col_double(),
+##   ..   start_lng = col_double(),
+##   ..   end_lat = col_double(),
+##   ..   end_lng = col_double(),
+##   ..   member_casual = col_character()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+str(Autumn)
+## spec_tbl_df [779,148 x 13] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ ride_id           : chr [1:779148] "BD0A6FF6FFF9B921" "96A7A7A4BDE4F82D" "C61526D06582BDC5" "E533E89C32080B9E" ...
+##  $ rideable_type     : chr [1:779148] "electric_bike" "electric_bike" "electric_bike" "electric_bike" ...
+##  $ started_at        : POSIXct[1:779148], format: "2020-11-01 13:36:00" "2020-11-01 10:03:26" ...
+##  $ ended_at          : POSIXct[1:779148], format: "2020-11-01 13:45:40" "2020-11-01 10:14:45" ...
+##  $ start_station_name: chr [1:779148] "Dearborn St & Erie St" "Franklin St & Illinois St" "Lake Shore Dr & Monroe St" "Leavitt St & Chicago Ave" ...
+##  $ start_station_id  : chr [1:779148] "110" "672" "76" "659" ...
+##  $ end_station_name  : chr [1:779148] "St. Clair St & Erie St" "Noble St & Milwaukee Ave" "Federal St & Polk St" "Stave St & Armitage Ave" ...
+##  $ end_station_id    : chr [1:779148] "211" "29" "41" "185" ...
+##  $ start_lat         : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ start_lng         : num [1:779148] -87.6 -87.6 -87.6 -87.7 -87.6 ...
+##  $ end_lat           : num [1:779148] 41.9 41.9 41.9 41.9 41.9 ...
+##  $ end_lng           : num [1:779148] -87.6 -87.7 -87.6 -87.7 -87.6 ...
+##  $ member_casual     : chr [1:779148] "casual" "casual" "casual" "casual" ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   ride_id = col_character(),
+##   ..   rideable_type = col_character(),
+##   ..   started_at = col_datetime(format = ""),
+##   ..   ended_at = col_datetime(format = ""),
+##   ..   start_station_name = col_character(),
+##   ..   start_station_id = col_double(),
+##   ..   end_station_name = col_character(),
+##   ..   end_station_id = col_double(),
+##   ..   start_lat = col_double(),
+##   ..   start_lng = col_double(),
+##   ..   end_lat = col_double(),
+##   ..   end_lng = col_double(),
+##   ..   member_casual = col_character()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+#Combine all data into one
+all_trips <- bind_rows(Winter, Spring, Summer, Autumn)
+# Remove unnecessary columns
+all_trips <- subset(all_trips, select = -c(start_lat, start_lng, end_lat, end_lng))
+colnames(all_trips) #Show colnames
+## [1] "ride_id"            "rideable_type"      "started_at"        
+## [4] "ended_at"           "start_station_name" "start_station_id"  
+## [7] "end_station_name"   "end_station_id"     "member_casual"
+nrow(all_trips) #no_ of rows
+## [1] 3116592
+dim(all_trips) #Dimensions of the data
+## [1] 3116592       9
+head(all_trips) #load the first 6 row of the data
+## # A tibble: 6 x 9
+##   ride_id          rideable_type started_at          ended_at            start_station_n~
+##   <chr>            <chr>         <dttm>              <dttm>              <chr>           
+## 1 BD0A6FF6FFF9B921 electric_bike 2020-11-01 13:36:00 2020-11-01 13:45:40 Dearborn St & E~
+## 2 96A7A7A4BDE4F82D electric_bike 2020-11-01 10:03:26 2020-11-01 10:14:45 Franklin St & I~
+## 3 C61526D06582BDC5 electric_bike 2020-11-01 00:34:05 2020-11-01 01:03:06 Lake Shore Dr &~
+## 4 E533E89C32080B9E electric_bike 2020-11-01 00:45:16 2020-11-01 00:54:31 Leavitt St & Ch~
+## 5 1C9F4EF18C168C60 electric_bike 2020-11-01 15:43:25 2020-11-01 16:16:52 Buckingham Foun~
+## 6 7259585D8276D338 electric_bike 2020-11-14 15:55:17 2020-11-14 16:44:38 Wabash Ave & 16~
+## # ... with 4 more variables: start_station_id <chr>, end_station_name <chr>,
+## #   end_station_id <chr>, member_casual <chr>
+summary(all_trips) #Shows the statistical summary
+##    ride_id          rideable_type        started_at                 
+##  Length:3116592     Length:3116592     Min.   :2020-11-01 00:00:08  
+##  Class :character   Class :character   1st Qu.:2020-11-06 20:13:53  
+##  Mode  :character   Mode  :character   Median :2020-11-10 16:17:15  
+##                                        Mean   :2020-11-13 05:20:02  
+##                                        3rd Qu.:2020-11-19 15:59:47  
+##                                        Max.   :2020-11-30 23:56:22  
+##     ended_at                   start_station_name start_station_id  
+##  Min.   :2020-11-01 00:02:20   Length:3116592     Length:3116592    
+##  1st Qu.:2020-11-06 20:36:08   Class :character   Class :character  
+##  Median :2020-11-10 16:32:15   Mode  :character   Mode  :character  
+##  Mean   :2020-11-13 05:39:45                                        
+##  3rd Qu.:2020-11-19 16:18:54                                        
+##  Max.   :2020-12-01 17:28:22                                        
+##  end_station_name   end_station_id     member_casual     
+##  Length:3116592     Length:3116592     Length:3116592    
+##  Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character  
+##                                                          
+##                                                          
+## 
+#drop values with NA
+all_trips <- na.omit(all_trips)
+
+# Filter out started_at data that are less than ended_at data, avoiding negative value
+all_trips <- all_trips %>% filter(all_trips$started_at < all_trips$ended_at)
+
+#Create a new column and name it ride_length
+all_trips$ride_length <- all_trips$ended_at - all_trips$started_at
+
+#Format the colummn to hour, minutes, and seconds
+all_trips$ride_length <- hms::hms(seconds_to_period(all_trips$ride_length))
+
+#Convert ride_length to number for easy calculation.
+all_trips <- mutate(all_trips, ride_length = as.numeric(ride_length))
+
+#Create a new column called day_of_week
+all_trips$day_of_week <- wday(all_trips$started_at, label = TRUE)
+
+#Save file as a CSV
+#all_trips %>% write.csv("clean_ride.csv")
