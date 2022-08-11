@@ -1,1 +1,67 @@
-
+# Descriptive analysis on ride_length
+mean(all_trips$ride_length) #average ride
+## [1] 1203.182
+quantile(all_trips$ride_length, .25) #Q1
+## 25% 
+## 388
+quantile(all_trips$ride_length, .50) #Median
+## 50% 
+## 692
+#median(all_trips$ride_length) #midpoint
+quantile(all_trips$ride_length, .75) #Q3
+##  75% 
+## 1285
+max(all_trips$ride_length) #longest ride
+## [1] 2156040
+min(all_trips$ride_length) #shortest ride
+## [1] 1
+sd(all_trips$ride_length)  #Standard Deviation 
+## [1] 8762.412
+summary(all_trips$ride_length)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       1     388     692    1203    1285 2156040
+#Compare ride_length of member_casual
+aggregate(all_trips$ride_length ~ all_trips$member_casual, FUN = mean)
+##   all_trips$member_casual all_trips$ride_length
+## 1                  casual             2008.8105
+## 2                  member              809.4879
+aggregate(all_trips$ride_length ~ all_trips$member_casual, FUN = median)
+##   all_trips$member_casual all_trips$ride_length
+## 1                  casual                  1028
+## 2                  member                   584
+aggregate(all_trips$ride_length ~ all_trips$member_casual, FUN = max)
+##   all_trips$member_casual all_trips$ride_length
+## 1                  casual               2156040
+## 2                  member                 89996
+aggregate(all_trips$ride_length ~ all_trips$member_casual, FUN = min)
+##   all_trips$member_casual all_trips$ride_length
+## 1                  casual                     1
+## 2                  member                     1
+#Average ride_length by each day for member_casual column.
+aggregate(all_trips$ride_length ~ all_trips$member_casual + all_trips$day_of_week, FUN = mean)
+##    all_trips$member_casual all_trips$day_of_week all_trips$ride_length
+## 1                   casual                   Sun             2459.6935
+## 2                   member                   Sun              882.9196
+## 3                   casual                   Mon             1725.7497
+## 4                   member                   Mon              745.4346
+## 5                   casual                   Tue             1728.4028
+## 6                   member                   Tue              761.2670
+## 7                   casual                   Wed             1535.9677
+## 8                   member                   Wed              754.6756
+## 9                   casual                   Thu             1827.8159
+## 10                  member                   Thu              779.3516
+## 11                  casual                   Fri             1919.1907
+## 12                  member                   Fri              816.4063
+## 13                  casual                   Sat             2236.8528
+## 14                  member                   Sat              934.1594
+#Number of rides by ride type
+all_trips %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>%  #weekday field
+  group_by(member_casual, weekday) %>%                  #group by usertype and weekday
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>%  #average duration
+  arrange(member_casual, weekday)  %>%                  #Sort
+  #visualization
+  ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge")
+## `summarise()` has grouped output by 'member_casual'. You can override using the `.groups` argument.
