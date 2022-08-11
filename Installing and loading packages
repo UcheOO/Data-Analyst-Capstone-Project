@@ -1,0 +1,7 @@
+install.packages("tidyverse")
+install.packages("ggplot2")
+install.packages("dplyr")
+
+library(tidyverse) #for data wrangling
+library(ggplot2)
+library(dplyr)
