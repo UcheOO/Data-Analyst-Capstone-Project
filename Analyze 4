@@ -1,0 +1,17 @@
+#coord_flip()
+#Distributed by ride type
+all_trips %>% 
+  group_by(rideable_type) %>%
+  summarise(count = length(ride_id),
+            '%' = (length(ride_id) / nrow(all_trips)) * 100,
+            'member' = (sum(member_casual == "member") / length(ride_id)) * 100,
+            'casual' = (sum(member_casual == "casual") / length(ride_id)) * 100,
+            'Member x Casual Perc Diferrent' = member - casual)
+## # A tibble: 2 x 6
+##   rideable_type   count   `%` member casual `Member x Casual Perc Diferrent`
+##   <chr>           <int> <dbl>  <dbl>  <dbl>                            <dbl>
+## 1 docked_bike   1805208  67.8   69.6   30.4                             39.2
+## 2 electric_bike  857784  32.2   62.1   37.9                             24.2
+ggplot(all_trips, aes(rideable_type, fill=member_casual)) + 
+  geom_bar() +
+  labs(x="Riderable type", title = "Distibution by type of bikes") 
