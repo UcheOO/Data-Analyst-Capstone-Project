@@ -1,0 +1,17 @@
+Guiding Questions
+
+What tools are you choosing and why?
+
+I am using R. I am using R because of the large amount of dataset and to work effectively.
+
+Have you ensured your data’s integrity?
+
+Yes, the dataset has identical columns.
+
+What steps have you taken to ensure that your data is clean?
+
+I converted some columns, so that I would be able to merge it. Next, I remove the NA data/not needed columns.
+
+I filter out the started_at data that are less than the ended_at data, then I create two new columns and named them ride_length and day_of_week.
+
+Next, I formatted the ride_length column to hour, minutes, and seconds.
