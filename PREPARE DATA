@@ -371,4 +371,6 @@ all_trips <- mutate(all_trips, ride_length = as.numeric(ride_length))
 all_trips$day_of_week <- wday(all_trips$started_at, label = TRUE)
 
 #Save file as a CSV
-#all_trips %>% write.csv("clean_ride.csv")
+#all_trips %>% write.csv("dope_ride.csv")
+
+all_trips %>% write.csv("dope_ride.csv")
