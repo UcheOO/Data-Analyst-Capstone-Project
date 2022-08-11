@@ -15,3 +15,8 @@ I converted some columns, so that I would be able to merge it. Next, I remove th
 I filter out the started_at data that are less than the ended_at data, then I create two new columns and named them ride_length and day_of_week.
 
 Next, I formatted the ride_length column to hour, minutes, and seconds.
+
+
+Have you documented your cleaning process so you can review and share those results?
+
+Yes, all document are store in R markdown.
