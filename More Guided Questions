@@ -20,3 +20,17 @@ Next, I formatted the ride_length column to hour, minutes, and seconds.
 Have you documented your cleaning process so you can review and share those results?
 
 Yes, all document are store in R markdown.
+
+Guiding Questions
+
+How should you organize your data to perform analysis on it?
+
+All data sets should be combine into one data set.
+
+Has your data been properly formatted?
+
+Yes, my data has been properly formatted. All the column has their correct data type.
+
+What surprises did you discover in the data?
+
+Casual have a lot more ride than members.
