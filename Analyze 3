@@ -1,0 +1,21 @@
+#Distributed within the weekday
+all_trips %>% 
+  group_by(day_of_week) %>%
+  summarise(count = length(ride_id),
+            '%' = (length(ride_id) / nrow(all_trips)) * 100,
+            'member' = (sum(member_casual == "member") / length(ride_id)) * 100,
+            'casual' = (sum(member_casual == "casual") / length(ride_id)) * 100,
+            'Member x Casual Perc Diferrent' = member - casual)
+## # A tibble: 7 x 6
+##   day_of_week  count   `%` member casual `Member x Casual Perc Diferrent`
+##   <ord>        <int> <dbl>  <dbl>  <dbl>                            <dbl>
+## 1 Sun         391584  14.7   59.1   40.9                            18.2 
+## 2 Mon         408768  15.3   74.2   25.8                            48.4 
+## 3 Tue         312036  11.7   74.5   25.5                            49.0 
+## 4 Wed         322392  12.1   74.7   25.3                            49.4 
+## 5 Thu         350700  13.2   71.1   28.9                            42.3 
+## 6 Fri         403296  15.1   67.2   32.8                            34.3 
+## 7 Sat         474216  17.8   54.9   45.1                             9.89
+ggplot(all_trips, aes(day_of_week, fill=member_casual)) + 
+  geom_bar() +
+  labs(x="Weekday", title = "Distibution by weekday")  
